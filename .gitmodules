@@ -1,0 +1,3 @@
+[submodule "gigl-client"]
+	path = gigl-client
+	url = C:/Program Files/Git/gigl-client/
