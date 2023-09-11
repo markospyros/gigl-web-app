@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\asset-manifest.json",
+      "PackagePath": "staticwebassets\\asset-manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\logo192.png",
+      "PackagePath": "staticwebassets\\logo192.png"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\logo512.png",
+      "PackagePath": "staticwebassets\\logo512.png"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\robots.txt",
+      "PackagePath": "staticwebassets\\robots.txt"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\static\\css\\main.e9d042e4.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.e9d042e4.css"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\static\\css\\main.e9d042e4.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.e9d042e4.css.map"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\static\\js\\main.02df5e69.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.02df5e69.js"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\static\\js\\main.02df5e69.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.02df5e69.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\marko\\source\\repos\\Gigl-API\\Gigl-API\\wwwroot\\static\\js\\main.02df5e69.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.02df5e69.js.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Gigl-API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Gigl-API.props",
+      "PackagePath": "build\\Gigl-API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Gigl-API.props",
+      "PackagePath": "buildMultiTargeting\\Gigl-API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Gigl-API.props",
+      "PackagePath": "buildTransitive\\Gigl-API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
