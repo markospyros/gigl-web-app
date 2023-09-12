@@ -1,111 +1,86 @@
-# Gigl
+# GIGL Web Application
 
-![Gigl Logo](Your-Logo-Image-Link-Here) <!-- Replace with your logo URL -->
+GIGL is a platform where comedians can showcase their humor by posting jokes and get them liked or "gigled" by fellow comedians. Users can browse different jokes based on their categories, like them, and even maintain their own profile of jokes.
 
-**Gigl** is a dedicated platform for humor and positivity, designed to escape the negativity often found on other social media platforms. Gigl offers a space where both professional comedians and general users can share jokes, funny content, and spread laughter.
+## Pages Overview
 
-## Overview
+- **Homepage**: Displays a list of trending jokes and allows users to navigate to different joke categories.
+  
+  ![Homepage Screenshot](path_to_homepage_screenshot.png)
 
-- **Positive Platform:** Gigl is all about spreading joy and positivity through humor.
-- **Inclusivity:** We welcome both professional comedians and everyday humorists.
-- **User Engagement:** Jokes receiving the most laughs or views gain more visibility.
-- **Safety & Moderation:** We ensure a respectful environment through AI-powered content moderation.
-- **Personalized Experience:** Tailor-made content based on user humor preferences.
-- **User Authentication:** User data is securely stored, and jokes are authenticated to maintain authenticity.
+- **Profile Page**: Shows details of a comedian, their jokes, and the jokes they have liked.
+  
+  ![Profile Page Screenshot](path_to_profile_page_screenshot.png)
+
+- **Joke Details**: Provides an in-depth view of a joke, showing its content, author, and the number of "gigles" it has received.
+  
+  ![Joke Details Screenshot](path_to_joke_details_screenshot.png)
 
 ## Technologies Used
 
-- **Frontend:** React.js
-- **Backend:** .NET Core
-- **Database:** Entity Framework Core with SQL Server
-- **Authentication:** JWT (JSON Web Tokens)
-- **AI Moderation:** (Your AI service or library)
-- **Deployment:** Azure (or your deployment platform)
+- **Backend**: 
+  - ASP.NET Core
+  - Entity Framework Core
+- **Frontend**: 
+  - React.js
+  - Tailwind CSS
 
-## Backend Endpoints
+## Endpoints
 
-### Account Controller
-- `POST` - CreateComedian: Register as a comedian.
-- `GET` - ShowProfile: View your comedian profile.
-- `GET` - IdentifySignedInUser: Identify signed-in users.
+### Account
 
-### Joke Controller
-- `GET` - ListJokeTypes: Retrieve joke categories.
-- `POST` - MakeAJoke: Share your humor with the community.
-- `GET` - ListJokesBasedByCategory: Explore jokes by category.
-- `POST` - LikeAJoke: Express appreciation for a joke.
-- `POST` - IsAJokeGigledByUser: Verify if a joke has been liked by you.
-- `GET` - ListGigledJokes: Retrieve jokes that a user (identified by token) has liked.
-- `GET` - ShowUsersJokes: Showcase your contributed jokes.
+- **POST /CreateComedian**: Endpoint to create a new comedian profile.
+- **GET /ShowProfile**: Fetches the profile of a specific comedian.
+- **GET /IdentifySignedInUser**: Identifies which comedian is currently signed in.
 
-## Frontend Features
+### Joke
 
-### Pages
+- **GET /ListJokeTypes**: Lists all available joke types or categories.
+- **POST /MakeAJoke**: Endpoint to post a new joke.
+- **DELETE /DeleteAJoke**: Deletes a specific joke.
+- **POST /EditAJoke**: Edits the details of an existing joke.
+- **GET /ListJokesBasedByCategory**: Lists jokes based on a specific category.
+- **POST /LikeAJoke**: "Gigles" or likes a specific joke.
+- **POST /IsAJokeGigledByUser**: Checks if a joke has been "gigled" by a specific user.
+- **GET /ListGigledJokes**: Lists all jokes that a comedian has "gigled".
+- **GET /ShowUsersJokes**: Shows all jokes posted by a specific comedian.
 
-#### Create Page
-![Create Page](YOUR-IMAGE-LINK-HERE)
-Easily create and share your humor. Responsive design for all screens.
+## Entities
 
-#### Feed Page
-![Feed Page](YOUR-IMAGE-LINK-HERE)
-Explore a feed of jokes and filter by categories.
+### Comedian
 
-#### Gigled Page
-![Gigled Page](YOUR-IMAGE-LINK-HERE)
-Review your liked jokes - your personal collection of laughter.
+Attributes:
+- **Id (String)**: Unique identifier for the comedian.
+- **Username (String)**: A unique username chosen by the comedian.
+- **ProfileImage (String)**: URL to the comedian's profile picture, with a default value.
+- **DateJoined (DateTime)**: The date when the comedian joined the GIGL platform.
 
-#### Profile Page
-![Profile Page](YOUR-IMAGE-LINK-HERE)
-Share your humor with a profile that highlights your contributions.
+Relationships:
+- **Jokes (List of Joke)**: A list of jokes that this comedian has created.
+- **LikedJokes (List of ComedianJoke)**: A list of jokes that this comedian has "gigled" or liked.
 
-### Components
+### Joke
 
-#### Join Modal
-![Join Modal](YOUR-IMAGE-LINK-HERE)
-A friendly invitation to join our community and spread laughter.
+Attributes:
+- **Id (String)**: Unique identifier for the joke.
+- **ComedianId (String)**: ID of the comedian who created the joke.
+- **ComedianUsername (String?)**: Optional username of the comedian associated with the joke.
+- **Date (DateTime)**: The date when the joke was created.
+- **Title (String)**: Title or header for the joke.
+- **Content (String)**: The actual content or body of the joke.
+- **Gigls (Int)**: Number of "gigles" or likes the joke has received.
+- **Category (String)**: The category or type of joke (with a default value of "All jokes").
 
-## User Authentication and Security
+Relationships:
+- **Comedian (Comedian)**: The comedian who created this joke. 
+- **ComediansThatGigled (List of ComedianJoke)**: A list of comedians who have "gigled" or liked this joke.
 
-- **Secure User Data:** User information is safely stored using industry-standard encryption methods.
-- **Local Storage:** User tokens are stored in the browser's local storage for a seamless experience.
-- **Maintaining Authenticity:** Jokes are authenticated to ensure the genuine humor of our community.
-- **Account Recovery:** Lost access to an account is designed to be unrecoverable, enhancing joke authenticity and user trust.
+### ComedianJoke
 
-## Entity Models
+Attributes:
+- **ComedianId (String)**: ID of the comedian associated with a specific joke.
+- **JokeId (String)**: ID of the joke that is associated with a comedian.
 
-### Comedian Entity
-
-The `Comedian` entity represents a user on Gigl who shares their humor with the community.
-
-- **Id**: A unique identifier for each comedian.
-- **Username**: The username of the comedian.
-- **ProfileImage**: URL of the comedian's profile image.
-- **Jokes**: A list of jokes shared by the comedian.
-- **LikedJokes**: A list of jokes liked by the comedian.
-- **DateJoined**: The date when the comedian joined Gigl.
-
-### Joke Entity
-
-The `Joke` entity represents a humorous content shared on Gigl.
-
-- **Id**: A unique identifier for each joke.
-- **ComedianId**: The ID of the comedian who posted the joke.
-- **Comedian**: Navigation property to the comedian who posted the joke.
-- **ComedianUsername**: The username of the comedian who posted the joke.
-- **Date**: The date when the joke was posted.
-- **Title**: The title of the joke.
-- **Content**: The content of the joke.
-- **Gigls**: The number of laughs (gigls) received by the joke.
-- **ComediansThatGigled**: A list of comedians who liked the joke.
-- **Category**: The category or type of the joke.
-
-### ComedianJoke Entity
-
-The `ComedianJoke` entity establishes a many-to-many relationship between comedians and jokes. It represents the relationship between a comedian and a joke.
-
-- **ComedianId**: The ID of the comedian.
-- **Comedian**: Navigation property to the comedian.
-- **JokeId**: The ID of the joke.
-- **Joke**: Navigation property to the joke.
-
-These entities help organize and manage the data within Gigl, allowing for the creation, sharing, liking, and personalized presentation of humorous content.
+Relationships:
+- **Comedian (Comedian)**: The comedian associated with a specific joke.
+- **Joke (Joke)**: The joke associated with a specific comedian.
