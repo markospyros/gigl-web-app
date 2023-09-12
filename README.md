@@ -4,17 +4,25 @@ GIGL is a platform where comedians can showcase their humor by posting jokes and
 
 ## Pages Overview
 
-- **Homepage**: Displays a list of trending jokes and allows users to navigate to different joke categories.
+- **Trending**: Displays a list of the most popular and trending jokes on the platform.
   
-  ![Homepage Screenshot](path_to_homepage_screenshot.png)
+  ![Trending Page Screenshot](path_to_trending_page_screenshot.png)
 
-- **Profile Page**: Shows details of a comedian, their jokes, and the jokes they have liked.
+- **Gigled**: Shows a list of jokes that the signed-in comedian has "gigled" or liked.
   
-  ![Profile Page Screenshot](path_to_profile_page_screenshot.png)
+  ![Gigled Page Screenshot](path_to_gigled_page_screenshot.png)
 
-- **Joke Details**: Provides an in-depth view of a joke, showing its content, author, and the number of "gigles" it has received.
+- **Create**: A page where comedians can create and post a new joke.
   
-  ![Joke Details Screenshot](path_to_joke_details_screenshot.png)
+  ![Create Page Screenshot](path_to_create_page_screenshot.png)
+
+## Components
+
+### JokeCard
+
+This component displays an individual joke. It presents the joke's title, content, number of "gigles", as well as the author's username. The card might also have buttons or actions to "gigle" a joke, share it, or view more details.
+
+![JokeCard Component Screenshot](path_to_jokecard_component_screenshot.png)
 
 ## Technologies Used
 
