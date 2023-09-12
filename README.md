@@ -16,6 +16,10 @@ GIGL is a platform where comedians can showcase their humor by posting jokes and
   
   ![Create Page Screenshot](path_to_create_page_screenshot.png)
 
+- **Profile**: Allows comedians to view and edit their personal information, see the jokes they've posted, and manage the jokes they've "gigled".
+  
+  ![Profile Page Screenshot](path_to_profile_page_screenshot.png)
+
 ## Components
 
 ### JokeCard
