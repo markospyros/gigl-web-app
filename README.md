@@ -29,7 +29,7 @@ For a live version of the GIGL web application, please visit [https://gigl-api20
 
 ### JokeCard
 
-This component displays an individual joke. It presents the joke's title, content, number of "gigles", as well as the author's username. The card might also have buttons or actions to "gigle" a joke, share it, or view more details.
+This component displays an individual joke. It presents the joke's title, content, number of "gigles", as well as the author's username. The card might also have buttons or actions to "gigle" a joke, edit, or delete.
 
 ![JokeCard Component Screenshot](gigl-screenshots/jokecard.png)
 
